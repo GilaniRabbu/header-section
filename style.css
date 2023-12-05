@@ -1,0 +1,164 @@
+:root {
+    font-size: 62.5%;
+
+    --fs-h1-clamp: clamp(2.4rem, 1.0184rem + 2.683vw, 3.4331rem);
+    --fs-h2-clamp: clamp(1.5rem, 0.8818rem + 2.0723vw, 2.5rem);
+    --fs-h3-clamp: clamp(1.325rem, 0.7607rem + 1.75vw, 2.125rem);
+    --fs-body-clamp: clamp(0.9rem, 0.6548rem + 1.2259vw, 1.2581rem);
+    --fs-small-clamp: clamp(0.625rem, 0.4821rem + 0.7143vw, 1.125rem);
+
+    --fs-h1: var(--fs-h1-clamp);
+    --fs-h2: var(--fs-h2-clamp);
+    --fs-h3: var(--fs-h3-clamp);
+    --fs-body: var(--fs-body-clamp);
+    --fs-small: var(--fs-small-clamp);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--fs-body);
+    font-weight: 500;
+    background-color: #1B778C;
+    display: grid;
+    place-items: center;
+}
+
+header {
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2CCC9;
+}
+
+.coupon {
+    width: 100%;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #593431;
+    background-color: #F2CCC9;
+}
+
+.coupon>span {
+    margin: 0 auto;
+}
+
+.close {
+    border: 0;
+    cursor: pointer;
+    color: #262626;
+    background-color: transparent;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 3em;
+    color: #262626;
+    background-color: #F2F2F2;
+}
+
+.logo-container {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.logo {
+    color: #262626;
+    cursor: pointer;
+    font-size: var(--fs-h2);
+    font-weight: 600;
+}
+
+label {
+    position: relative;
+}
+
+input {
+    outline: 0;
+    border: 0;
+    padding: 0.75em 0.25em 0.75em 2.2em;
+    border-radius: 50px;
+    background-color: #D1D4D8;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-link {
+    color: #262626;
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    font-size: var(--fs-h3);
+    border: 0;
+    color: #262626;
+    background-color: transparent;
+}
+
+.close:hover,
+.logo:hover,
+.nav-link:hover,
+.mobile-menu:hover {
+    opacity: 0.85;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    ul {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .coupon {
+        gap: 2em;
+    }
+
+    label {
+        display: none;
+    }
+}
