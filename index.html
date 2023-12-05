@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>iCodeMas #05</title>
+</head>
+
+<body>
+    <header>
+        <div class="coupon">
+            <span>Use code "iCode" for a 20% discount at checkout</span>
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav>
+            <div class="logo-container">
+                <h1 class="logo">iCodeMas</h1>
+                <label>
+                    <input type="text" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </div>
+            <button class="mobile-menu" aria-controls="primary-navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#">Featured</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const closeBtn = document.querySelector(".close");
+        const card = document.querySelector(".coupon");
+
+        closeBtn.addEventListener("click", () => {
+            card.classList.add("hidden");
+            setTimeout(() => card.classList.remove("hidden"), 3500);
+        });
+    </script>
+</body>
+
+</html>
